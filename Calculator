@@ -1,0 +1,262 @@
+// Online C compiler to run C program online
+/* Prepare a simple calculator to perform mathematical operations. Accept values and operations to be performed from
+user. Allow only numeric values else show appropriate messages to user.
+*/
+#include <stdio.h>
+#include <math.h>
+
+int main() 
+{
+    //info about the calculator.
+    printf("This is a calculator developed by using c programming. \n");
+    printf("In this you can perform the following operations: \n");
+    printf("1. Addition \n2. Substraction \n3. Multiplication \n4. Division \n5. Modulus \n6. Square \n7. Cube \n8. Square root \n9. Cube root \n10. Exponent \n11. Logarithm \n12. Trigonometry\n");
+    printf("If you want to close the calculator type \"close\" \n");
+    printf("_____________________________________________________________\n");
+    printf("\n");
+    char quit[5];                       //For closing the execution of program
+    while(strcmp(quit,"close")!=0 && strcmp(quit,"Close")!=0  && strcmp(quit,"CLOSE")!=0  )         //Loop for continues operations like calculator
+    {
+    printf("Enter the number of the operation you want to performed:\n");
+    int choice;
+    scanf("%d",&choice);
+    printf("\n_____________________________________________________________\n");
+    double a,b;                 //a=first no.       b=second no.
+    int trigno;         //For trigonometric ratios
+    //operations...
+    char ch;                            //ch=choies
+    double num;                         //num=numbers or operands
+    double sum=0;                       //sum=addition
+    double diff=0;                      //diff=suubstraction
+    double mul=1;                       //mul=multiplication
+    double div=1;
+    double result=0;
+    switch(choice)
+    {
+        case 1:            //Addition
+        {
+            printf("Enter numbers: \n");
+            
+            scanf("%c",&ch);
+            
+            while(ch!='q' && ch!='Q')
+            {
+              scanf("%lf",&num);
+              sum+=num;
+              
+              printf("To enter another number press \'n\' or press \'q\' to stop: \n");
+              
+              scanf(" %c", &ch);
+              
+            }
+            printf("\nResults = %lf",sum);
+        }
+        break;
+        case 2:            //Substraction
+        {
+            printf("Enter numbers: \n");
+            printf("First No.: \n");
+            scanf("%lf",&diff);
+            while(ch!='q' && ch!='Q')
+            {
+                printf("\n Another No.:\n");
+                scanf("%lf",&num);
+                diff-=num;
+                printf("To enter another number press \'n\' or press \'q\' to stop: \n");
+              
+              scanf(" %c", &ch);
+            }
+            printf("\nResults = %lf",diff);
+            
+        }
+        break;
+        case 3:            //Multiplication
+        {
+            printf("Enter numbers: \n");
+
+            
+            while(ch!='q' && ch!='Q')
+            {
+              scanf("%lf",&num);
+              mul*=num;
+              
+              printf("To enter another number press \'n\' or press \'q\' to stop: \n");
+              
+              scanf(" %c", &ch);
+            }
+            printf("\nResults = %lf",mul);
+        }
+        break;
+        case 4:            //Division
+        {
+            printf("Enter numbers: \n");
+
+            
+            while(ch!='q' && ch!='Q')
+            {
+              scanf("%lf",&num);
+              div/=num;
+              
+              printf("To enter another number press \'n\' or press \'q\' to stop: \n");
+              
+              scanf(" %c", &ch);
+            }
+            printf("\nResults = %lf",div);
+        }
+        break;
+        case 5:            //Modulus
+        {
+            printf("Enter two numbers: \n");
+            printf("First No.: \n");
+            scanf("%lf",&a);
+            printf("\n Second No.:\n");
+            scanf("%lf",&b);
+                
+            if(b!=0)
+            {
+                
+                result=(int)a%(int)b;
+                printf("The modulus of %lf with %lf is %lf.",a,b,result);
+            }
+            else
+            {
+                printf("ERROR: Modulus by 0!");
+            }
+        }
+        break;
+        case 6:            //square
+        {
+            printf("Enter a number: \n");
+            scanf("%lf",&a);
+            
+            result=a*a;
+            printf("The square of %lf is %lf.",a,result);
+        }
+        break;
+        case 7:            //Cube
+        {
+            printf("Enter a number: \n");
+            scanf("%lf",&a);
+            
+            result=a*a*a;
+            printf("The cube of %lf is %lf.",a,result);
+        }
+        break;
+        case 8:            //Square root
+        {
+            printf("Enter a number: \n");
+            scanf("%lf",&a);
+            
+            result=sqrt(a);
+            printf("The square root of %lf is %lf.",a,result);
+        }
+        break;
+        case 9:            //Cube root
+        {
+            printf("Enter a number:\n");
+            scanf("%lf",&a);
+            result=cbrt(a);
+            printf("The cube root of %lf is %lf.",a,result);
+        }
+        break;
+        case 10:            //Exponent
+        {
+            printf("Enter two numbers: \n");
+            printf("First No.: \n");
+            scanf("%lf",&a);
+            printf("\n Second No.:\n");
+            scanf("%lf",&b);
+            
+            result=pow(a,b);
+            printf("%lf to the power %lf is %lf.",a,b,result);
+        }
+        break;
+        case 11:            //Logarithm
+        {
+            printf("Enter a number: \n");
+            scanf("%lf",&a);
+            
+            result=log(a);
+            printf("The log of %lf is %lf.",a,result);
+        }
+        break;
+        case 12:            //Trigonometry
+        {
+            printf("The trigonmetric ratio:\n");
+            printf("Enter \n1 for sin \n2 for cos \n3 for tan \n4 for cot \n5 for sec \n6 for cosec \n");
+            scanf("%d",&trigno);
+            
+            switch(trigno)
+            {
+                case 1:
+                {
+                    printf("Enter an angle in degrees: \n");
+                    scanf("%lf",&a);
+                    b=a* M_PI /180;             //To convert degrees into radians
+                    result=sin(b);
+                    printf("sin of %lf is %f",a,result);
+                }
+                break;
+                case 2:
+                {
+                    printf("Enter an angle in degrees: \n");
+                    scanf("%lf",&a);
+                    b=a* M_PI /180;             //To convert degrees into radians
+                    result=cos(b);
+                    printf("cos of %lf is %f",a,result);
+                }
+                break;
+                case 3:
+                {
+                    printf("Enter an angle in degrees: \n");
+                    scanf("%lf",&a);
+                    b=a* M_PI /180;             //To convert degrees into radians
+                    result=tan(b);
+                    printf("tan of %lf is %f",a,result);
+                }
+                break;
+                case 4:
+                {
+                    printf("Enter an angle in degrees: \n");
+                    scanf("%lf",&a);
+                    b=a* M_PI /180;             //To convert degrees into radians
+                    result=1/ tan(b);
+                    printf("cot of %lf is %f",a,result);
+                }
+                break;
+                case 5:
+                {
+                    printf("Enter an angle in degrees: \n");
+                    scanf("%lf",&a);
+                    b=a* M_PI /180;             //To convert degrees into radians
+                    result=1/ cos(b);
+                    printf("sec of %lf is %f",a,result);
+                }
+                break;
+                case 6:
+                {
+                    printf("Enter an angle in degrees: \n");
+                    scanf("%lf",&a);
+                    b=a* M_PI /180;             //To convert degrees into radians
+                    result=1/ sin(b);
+                    printf("cosec of %lf is %f",a,result);
+                }
+                break;
+                default:
+                {
+                    printf("Not a trigonometric ratio!");
+                }
+            }
+        
+    }
+    break;
+        default:
+        {
+            printf("Wrong input!");
+        }
+    }
+    printf("\nTo continue type continue! \n");
+    scanf("%s",&quit);
+    }
+ return 0;       
+}
