@@ -1,0 +1,226 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    printf("Menu:");
+    printf("\n 1. Stationary \t \t \t \t2. Grocery \t \t \t \t 3. Clothes ");
+    printf("\n 11 Notebooks  50 Rs\t \t  21 Rice 50 Rs/kg  \t  31 T shirts (girls) 150 Rs");
+    printf("\n 12 Pens  10 Rs\t \t \t  22 Wheat 50 Rs/kg  \t  32 T shirts (boys) 150 Rs");
+    printf("\n 13 Pencils 5 Rs\t\t\t   23 Bread 40 Rs  \t  33 Formal shirts 250 Rs");
+    printf("\n 14 Erasers 5 Rs\t \t \t 24 Milk 70 Rs/L  \t \t  34 Trousers 500 Rs");
+    printf("\n 15 Sharpner 5 Rs\t \t \t  25 Cheese 50 Rs  \t  35 Pants 300 Rs");
+    printf("\n 16 stationary box 50 Rs   26 Tomato sause 70 Rs \t 36 Kurtis 300 Rs");
+    printf("\n 17 Stationary pouch 50 Rs   27 Tur Dal 75 Rs \t  37 Shorts 300 Rs");
+    printf("\n 18 Crayons 20 Rs\t \t\t     28 Moog dal 75 Rs\t  38 Casuals 200 Rs");
+    printf("\n 19 Colour pencils 25 Rs\t  29 Tea 70 Rs");
+    printf("\n\n");
+    int choice;
+    char ch;
+    int qt;  //qt=quantity
+    float tp=0; //tp=temporary price
+    float fp=0; //fp=final price
+    while(ch!='q')
+    {
+            printf("Enter the number of item(s): (To continue typw \'c\' and to stope type\'q\')\n ");
+
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 11:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=50*qt;
+            }
+            break;
+            case 12:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=10*qt;
+            }
+            break;
+            case 13:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=5*qt;
+            }
+            break;
+            case 14:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=5*qt;
+            }
+            break;
+            case 15:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=5*qt;
+            }
+            break;
+            case 16:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=50*qt;
+            }
+            break;
+            case 17:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=50*qt;
+            }
+            break;
+            case 18:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=20*qt;
+            }
+            break;
+            case 19:
+            {
+                
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=25*qt;
+            }
+            break;
+            case 21:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=50*qt;
+            }
+            break;
+            case 22:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=50*qt;
+            }
+            break;
+            case 23:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=40*qt;
+            }
+            break;
+            case 24:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=70*qt;
+            }
+            break;
+            case 25:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=50*qt;
+            }
+            break;
+            case 26:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=70*qt;
+            }
+            break;
+            case 27:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=75*qt;
+            }
+            break;
+            case 28:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=75*qt;
+            }
+            break;
+            case 29:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=70*qt;
+            }
+            break;
+            case 31:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=150*qt;
+            }
+            break;
+            case 32:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=150*qt;
+            }
+            break;
+            case 33:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=250*qt;
+            }
+            break;
+            case 34:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=500*qt;
+            }
+            break;
+            case 35:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=300*qt;
+            }
+            break;
+            case 36:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=300*qt;
+            }
+            break;
+            case 37:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=300*qt;
+            }
+            break;
+            case 38:
+            {
+                printf("Enter quantity: \n");
+                scanf("%d",&qt);
+                tp=200*qt;
+            }
+            break;
+            default:
+            {
+                printf("\n Wrong Input! \n");
+            }
+        }
+        fp+=tp;
+        scanf("%c",&ch);
+    }
+    printf("\n------------------------------------------------------------------\n");
+    printf("\n");
+    printf("\n ------------Bill---------------\n");
+    printf("Amount to pay: %f",fp);
+    return 0;
+}
