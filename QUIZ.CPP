@@ -46,52 +46,53 @@ default:
 printf("\nWrong Choice!");
 }
 }
-printf("\n----------------------------------------------------------------------------------------");
+printf("\n--------------------------------------------------------------------------------");
 if(score>5)
 {
-    printf("\n\n\nCERTIFICATE\n----------------------\n");
-    printf("\n\n \t\t\t\t QUIZ ZONE \n \t\t\t\t --------------------\n");
-    printf("\n \n SUCCESSFULLY COMPLETED ");
+    printf("\nCERTIFICATE\n------------\n");
+    printf("\n \t\t\t\t QUIZ ZONE \n \t\t\t\t ---------\n");
+    printf("\nSUCCESSFULLY COMPLETED ");
 if(ch==1)
 {
-printf("\n\nBrain teasers galore a riddle field quiz adventure\n\n ");
+printf("\nBrain teasers galore a riddle field quiz adventure\n\n ");
 }
 else if(ch==2)
 {
-printf(" \n\nlinguistic gymnastics the ABC's of brain teasers\n\n");
+printf("\nlinguistic gymnastics the ABC's of brain teasers\n\n");
 }
 else
 {
-printf("\n\nCrack the code a beginner C quiz \n\n ");
+printf("\nCrack the code a beginner C quiz \n\n ");
 }
     printf("\n \n Name: %s",user.name );
-    printf("\n\n Age: %d",user.age);
+    printf("\n Age: %d",user.age);
     user.m1=score1;
     printf("\n\n Level1 Score: %d",user.m1);
     user.m2=score2;
-    printf("\n\n Level2 Score: %d",user.m2);
+    printf("\n Level2 Score: %d",user.m2);
     user.m3=score3;
-    printf("\n\n Level3 Score: %d",user.m3);
+    printf("\n Level3 Score: %d",user.m3);
     user.total=score;
-    printf("\n\n Total Score: %d",user.total);
+    printf("\n Total Score: %d",user.total);
 if(user.total<=7)
 {
-strcpy(user.remark,"Good");
+strcpy(user.remark,"GOOD");
 }
 else if(user.total==8)
 {
-strcpy(user.remark,"Very Good");
+strcpy(user.remark,"VERY GOOD");
 }
 else if(user.total==9)
 {
-strcpy(user.remark,"Excellent");
+strcpy(user.remark,"EXECELLENT");
 }
 else
 {
 strcpy(user.remark,"ERROR!");
 }
-printf("\n\n\n REMARK: %s",user.remark);
+printf("\n\n REMARK: %s",user.remark);
 printf("\n\nVerified from Quiz Zone authorities...");
+printf("\n-------------------------------------------------------------------------------");
 }
     getch();
 }
@@ -150,7 +151,7 @@ int quiz1() {
 		    break;
 	    }
 
-	    if (score1 <= 2) {
+	    if (score1 < 2) {
 		printf("Opps! You are not able for level:2\n");
 		goto level1;
 	    } else {
@@ -168,6 +169,8 @@ int quiz1() {
 	    switch (answer[0]) {
 		case 'b':
 		case 'B':
+		case 'd':
+		case 'D':
 		    printf("Correct!\n");
 		    score2++;
 		    break;
@@ -208,7 +211,7 @@ int quiz1() {
 		    break;
 	    }
 
-	    if (score2 <= 2) {
+	    if (score2 < 2) {
 		printf("Opps! You are not able for level:3\n");
 		goto level2;
 	    } else {
@@ -266,7 +269,7 @@ int quiz1() {
 		    break;
 	    }
 
-	    if (score3 <= 2) {
+	    if (score3 < 2) {
 		printf("Opps! You are not able for the Certificate Yet!\n");
 		goto level3;
 	    } else {
@@ -293,82 +296,82 @@ int quiz2() {
     printf("Question 1: Which letter is an exclamation?\n");
     scanf(" %c", &ans);
     if (ans == 'o' || ans == 'O') {
-        printf("Correct!\n");
-        score1++;
+	printf("Correct!\n");
+	score1++;
     } else {
-        printf("Incorrect!\n");
+	printf("Incorrect!\n");
     }
 
     printf("Question 2: Which letter is a drink?\n");
     scanf(" %c", &ans);
     if (ans == 't' || ans == 'T') {
-        printf("Correct!\n");
-        score1++;
+	printf("Correct!\n");
+	score1++;
     } else {
-        printf("Incorrect!\n");
+	printf("Incorrect!\n");
     }
 
     if (score1 < 2) {
-        printf("Oops! You are not able to proceed to Level 2.\n");
-        goto level1;
+	printf("Oops! You are not able to proceed to Level 2.\n");
+	goto level1;
     } else {
-        printf("\nCONGRATULATIONS! You've completed Level 1.\n");
+	printf("\nCONGRATULATIONS! You've completed Level 1.\n");
 
-        // Level 2
-        level2:
-        score2=0;
-        printf("\nLEVEL 2:\n");
-        printf("Question 1: Which letter is a question mark?\n");
-        scanf(" %c", &ans);
-        if (ans == 'y' || ans == 'Y') {
-            printf("Correct!\n");
-            score2++;
-        } else {
-            printf("Incorrect!\n");
-        }
+	// Level 2
+	level2:
+	score2=0;
+	printf("\nLEVEL 2:\n");
+	printf("Question 1: Which letter is a question mark?\n");
+	scanf(" %c", &ans);
+	if (ans == 'y' || ans == 'Y') {
+	    printf("Correct!\n");
+	    score2++;
+	} else {
+	    printf("Incorrect!\n");
+	}
 
-        printf("Question 2: Which letter is a tool?\n");
-        scanf(" %c", &ans);
-        if (ans == 'x' || ans == 'X') {
-            printf("Correct!\n");
-            score2++;
-        } else {
-            printf("Incorrect!\n");
-        }
+	printf("Question 2: Which letter is a tool?\n");
+	scanf(" %c", &ans);
+	if (ans == 'x' || ans == 'X') {
+	    printf("Correct!\n");
+	    score2++;
+	} else {
+	    printf("Incorrect!\n");
+	}
 
-        printf("Question 3: Which letter is a vegetable?\n");
-        scanf(" %c", &ans);
-        if (ans == 'p' || ans == 'P') {
-            printf("Correct!\n");
-            score2++;
-        } else {
-            printf("Incorrect!\n");
-        }
+	printf("Question 3: Which letter is a vegetable?\n");
+	scanf(" %c", &ans);
+	if (ans == 'p' || ans == 'P') {
+	    printf("Correct!\n");
+	    score2++;
+	} else {
+	    printf("Incorrect!\n");
+	}
 
-        if (score2 < 2) {
-            printf("Oops! You are not able to proceed to Level 3.\n");
-            goto level2;
-        } else {
-            printf("\nCONGRATULATIONS! You've completed Level 2.\n");
+	if (score2 < 2) {
+	    printf("Oops! You are not able to proceed to Level 3.\n");
+	    goto level2;
+	} else {
+	    printf("\nCONGRATULATIONS! You've completed Level 2.\n");
 
-            // Level 3
-            level3:
-            score3=0;
-            printf("\nLEVEL 3:\n");
-            printf("Question 1: Which letter is part of your face?\n");
-            scanf(" %c", &ans);
-            if (ans == 'i' || ans == 'I') {
-                printf("Correct!\n");
-                score3++;
-            } else {
-                printf("Incorrect!\n");
-            }
+	    // Level 3
+	    level3:
+	    score3=0;
+	    printf("\nLEVEL 3:\n");
+	    printf("Question 1: Which letter is part of your face?\n");
+	    scanf(" %c", &ans);
+	    if (ans == 'i' || ans == 'I') {
+		printf("Correct!\n");
+		score3++;
+	    } else {
+		printf("Incorrect!\n");
+	    }
 
-            printf("Question 2: Which letter represents an insect?\n");
-            scanf(" %c", &ans);
-            if (ans == 'b' || ans == 'B') {
-                printf("Correct!\n");
-                score3++;
+	    printf("Question 2: Which letter represents an insect?\n");
+	    scanf(" %c", &ans);
+	    if (ans == 'b' || ans == 'B') {
+		printf("Correct!\n");
+		score3++;
             } else {
                 printf("Incorrect!\n");
             }
